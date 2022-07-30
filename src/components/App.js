@@ -16,7 +16,7 @@ function App() {
       return <State state={state} id={'state'+(id+1)}/>
     }) } 
     </ul>
-  </div>;
+  </div>
   )
 }
 
