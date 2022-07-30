@@ -9,13 +9,15 @@ import State from "./State";
 
 function App() {
   
-  return <div id="main">
+  return (
+     <div id="main">
     <ul>
     {states.map((state,id)=> {
       return <State state={state} id={'state'+(id+1)}/>
     }) } 
     </ul>
   </div>;
+  )
 }
 
 export default App;
