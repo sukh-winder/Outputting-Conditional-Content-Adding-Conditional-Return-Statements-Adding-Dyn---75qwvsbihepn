@@ -4,17 +4,15 @@ import Town from './Town';
 const City = ({city,id}) => {
     const[toggle,setToggle] = useState(false);
 
-    function handleToggle () {
-        if(!toggle) {
-            setToggle(true);
-        }
-        else {
-            setToggle(false);
-        }
+    function handleToggle (event) {
+      event.stopPropagation();
+      
+      setToggle(!toggle);
+
     }
   return (
     <div>
-      <li id={id} onClick={handleToggle}>
+      <li id={id} key={id} onClick={handleToggle}>
         <h2>{city.name}</h2>
         {toggle && <ul>
             {city.towns.map((town,id)=> {
