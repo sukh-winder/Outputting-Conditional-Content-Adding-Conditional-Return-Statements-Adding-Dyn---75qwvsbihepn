@@ -18,7 +18,7 @@ const State = ({state,id}) => {
         <h2>{state.name}</h2>
         {toggle && <ul>
             {state.cities.map((city,id)=> {
-                return <City city={city} id={'city'+(id+1)}/>
+                return <City city={city} id={'city'+(id+1)} key={id}/>
             })}
         </ul>}
       </li>
@@ -27,3 +27,4 @@ const State = ({state,id}) => {
 }
 
 export default State
+
