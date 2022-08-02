@@ -15,7 +15,7 @@ const State = ({state,id}) => {
   return (
     <div>
       <li id={id} onClick={handleToggle}>
-        <h2>{state.name}</h2>
+        {state.name}
         {toggle && <ul>
             {state.cities.map((city,id)=> {
                 return <City city={city} id={'city'+(id+1)} key={id}/>
