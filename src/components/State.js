@@ -13,16 +13,17 @@ const State = ({state,id}) => {
         }
     }
   return (
-    <div>
+    <>
       <li id={id} onClick={handleToggle}>
         {state.name}
+      </li>
+
         {toggle && <ul>
             {state.cities.map((city,id)=> {
                 return <City city={city} id={'city'+(id+1)} key={id}/>
             })}
         </ul>}
-      </li>
-    </div>
+    </>
   )
 }
 
