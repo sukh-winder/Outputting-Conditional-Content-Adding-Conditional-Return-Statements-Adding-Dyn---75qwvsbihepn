@@ -4,7 +4,7 @@ function Town({town,id}) {
   return (
     <div>
       <li id={id}>
-        <h3>{town.name}</h3>
+        {town.name}
       </li>
     </div>
   )
