@@ -13,7 +13,7 @@ const City = ({city,id}) => {
   return (
     <div>
       <li id={id} onClick={handleToggle}>
-        <h2>{city.name}</h2>
+        {city.name}
         {toggle && <ul>
             {city.towns.map((town,id)=> {
                 return <Town town={town} id={'city'+(id+1)} key={id}/>
