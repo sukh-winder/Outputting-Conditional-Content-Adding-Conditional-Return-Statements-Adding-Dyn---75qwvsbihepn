@@ -16,7 +16,7 @@ const City = ({city,id}) => {
         {city.name}
         {toggle && <ul>
             {city.towns.map((town,id)=> {
-                return <Town town={town} id={'city'+(id+1)} key={id}/>
+                return <Town town={town} id={'town'+(id+1)} key={id}/>
             })}
         </ul>}
       </li>
